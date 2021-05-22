@@ -3,19 +3,44 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+    <ion-title>FLAMES</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
+      <ion-title size="large">FLAMES</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<!-- main content -->
+  <div class="main-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-5">
+          <div class="d-flex justify-content-center mt-5">
+            <h3 class="text-success">Lets known relationship between both
+            </h3>
+            <ion-icon class="ms-2 h2 text-danger" slot="start" [ios]="'heart' + '-outline'" [md]="'heart' + '-sharp'">
+            </ion-icon>
+          </div>
+          <div class="mt-4">
+            <form [formGroup]='flamesForm' (ngSubmit)="handleFlames()">
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Enter Your Name</mat-label>
+                <input matInput formControlName="nameOne">
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Enter Your Crush Name</mat-label>
+                <input matInput formControlName="nameTwo">
+              </mat-form-field>
+              <div class="text-center">
+                <button class="btn btn-primary" [disabled]="this.flamesForm.invalid">FLAMES</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>  
+    </div>
   </div>
 </ion-content>
