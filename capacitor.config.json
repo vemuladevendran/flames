@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "flames",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

@@ -1,0 +1,8 @@
+{
+  "name": "flames",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "27f80a09"
+}
