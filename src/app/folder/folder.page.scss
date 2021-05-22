@@ -3,7 +3,14 @@ ion-menu-button {
 }
 
 .main-content {
-  background-image: url(/assets/bg-logo.webp);
+  background-image: url(/assets/bg-logo-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.8;
+}
+
+.subtitle-1 {
+  color: #08039e !important;
+  font-weight: bolder;
+  text-shadow: -1px 0px #80e04a;
 }

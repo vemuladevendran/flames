@@ -11,6 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class FolderPage implements OnInit {
   flamesForm: FormGroup;
   flames = '';
+  showLoader = false;
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'bottom';
   constructor(
@@ -94,7 +95,7 @@ export class FolderPage implements OnInit {
 
 
   openSnackBar() {
-    this.snackBar.open(this.flames , 'Close', {
+    this.snackBar.open(this.flames, 'Close', {
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition,
     });
@@ -107,7 +108,11 @@ export class FolderPage implements OnInit {
       const nameTwo = this.flamesForm.get('nameTwo').value;
       if (nameOne != nameTwo) {
         this.calculateFlames(nameOne, nameTwo);
-        this.openSnackBar();
+        this.showLoader = true;
+        setTimeout(() => {
+          this.showLoader = false;
+          this.openSnackBar();
+        }, 3000);
       }
 
     } catch (error) {

@@ -13,16 +13,15 @@
       <ion-title size="large">FLAMES</ion-title>
     </ion-toolbar>
   </ion-header>
-<!-- main content -->
-  <div class="main-content">
-    <div class="container-fluid">
-      <div class="row">
+  <!-- main content -->
+  <div class="main-content h-100">
+    <div class="container-fluid h-100">
+      <div class="row h-100">
         <div class="col-12 col-md-5">
           <div class="d-flex justify-content-center mt-5">
-            <h3 class="text-success">Lets known relationship between both
+            <h3 class="subtitle-1">Lets known relationship between both
             </h3>
-            <ion-icon class="ms-2 h2 text-danger" slot="start" [ios]="'heart' + '-outline'" [md]="'heart' + '-sharp'">
-            </ion-icon>
+            <img src="/assets/heart.gif" style="width: 38px;">
           </div>
           <div class="mt-4">
             <form [formGroup]='flamesForm' (ngSubmit)="handleFlames()">
@@ -34,13 +33,17 @@
                 <mat-label>Enter Your Crush Name</mat-label>
                 <input matInput formControlName="nameTwo">
               </mat-form-field>
+
               <div class="text-center">
                 <button class="btn btn-primary" [disabled]="this.flamesForm.invalid">FLAMES</button>
+              </div>
+              <div class="mt-1 d-flex justify-content-center" *ngIf="showLoader">
+                <img src="/assets/loader.png" style="width: 5rem;">
               </div>
             </form>
           </div>
         </div>
-      </div>  
+      </div>
     </div>
   </div>
 </ion-content>
