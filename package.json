@@ -7,6 +7,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-android": "CAPACITOR_ANDROID_STUDIO_PATH=/opt/android-studio/bin/studio.sh ionic capacitor build android",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
