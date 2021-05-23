@@ -5,7 +5,6 @@
         <ion-list id="inbox-list">
           <ion-list-header>DEVENDRAN</ion-list-header>
           <ion-note>devendranvemula@gmail.com</ion-note>
-
           <ion-menu-toggle auto-hide="false">
             <ion-item lines="none" detail="false" routerLink="folder">
               <ion-icon slot="start" [ios]="'heart' + '-outline'" [md]="'heart' + '-sharp'"></ion-icon>
@@ -15,11 +14,21 @@
               <ion-icon slot="start" [ios]="'share' + '-outline'" [md]="'share' + '-sharp'"></ion-icon>
               <ion-label>Share App</ion-label>
             </ion-item>
-            <ion-item lines="none" detail="false">
-              <ion-icon slot="start" name="information-circle-outline"></ion-icon>
+            <ion-item lines="none" detail="false" routerLink="details">
+              <ion-icon slot="start" name="alert-circle"></ion-icon>
               <ion-label>Details</ion-label>
             </ion-item>
           </ion-menu-toggle>
+        </ion-list>
+        <ion-list id="labels-list">
+          <ion-list-header>Links</ion-list-header>
+
+          <ion-item>
+            <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
+            <ion-label> <a style="color: black; text-decoration: none;" target="_blank" href="https://github.com/vemuladevendran">GITHUB</a></ion-label>
+          </ion-item>
+          <span>For more details About Code <a href="https://github.com/vemuladevendran/flames" target="_blank">Click Here</a></span>
+
         </ion-list>
       </ion-content>
     </ion-menu>

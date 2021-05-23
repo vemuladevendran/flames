@@ -8,8 +8,8 @@ import { FolderPageRoutingModule } from './folder-routing.module';
 
 import { FolderPage } from './folder.page';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import {MatFormFieldModule} from '@angular/material/form-field'; 
-import {MatInputModule} from '@angular/material/input'; 
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 @NgModule({
   imports: [
     CommonModule,
@@ -21,6 +21,7 @@ import {MatInputModule} from '@angular/material/input';
     MatInputModule,
     MatSnackBarModule,
   ],
-  declarations: [FolderPage]
+  declarations: [
+    FolderPage]
 })
-export class FolderPageModule {}
+export class FolderPageModule { }

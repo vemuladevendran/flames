@@ -112,11 +112,15 @@ export class FolderPage implements OnInit {
         setTimeout(() => {
           this.showLoader = false;
           this.openSnackBar();
-        }, 3000);
+        }, 2500);
       }
 
+      else{
+        this.flames = 'Both Names Are Same'
+        this.openSnackBar();
+      }
     } catch (error) {
-      console.error('both name are same ');
+      console.error(error);
     }
   }
 }
