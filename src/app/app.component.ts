@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Share } from '@capacitor/share';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -7,19 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   constructor() { }
 
+
+  
  
-  async shareNews(): Promise<any> {
-    const shareData = {
+  async shareApp(): Promise<any> {
+    await Share.share({
       title: 'Flames App',
       text: 'Have Fun',
-      url: '',
-    };
-
-    try {
-      await navigator.share(shareData);
-      console.log('App shared successfully');
-    } catch (error) {
-      console.error('Share failed:', error.message);
-    }
+      url: 'https://github.com/vemuladevendran',
+      dialogTitle: 'Share with buddies',
+    });
   }
 }
