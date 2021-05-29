@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package com.devendran.flames;
 
 import com.getcapacitor.BridgeActivity;
 
