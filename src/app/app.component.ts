@@ -15,7 +15,7 @@ export class AppComponent {
     await Share.share({
       title: 'Flames App',
       text: 'Have Fun',
-      url: 'https://play.google.com/store/apps/details?id=com.devendran.flames',
+      url: 'https://play.google.com/store/apps/details?id=com.devendran.flamesapp',
       dialogTitle: 'Share with buddies',
     });
   }

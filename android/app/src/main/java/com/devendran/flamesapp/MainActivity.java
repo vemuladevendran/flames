@@ -1,4 +1,4 @@
-package com.devendran.flames;
+package com.devendran.flamesapp;
 
 import com.getcapacitor.BridgeActivity;
 
